@@ -1,0 +1,16 @@
+title: THE ROOM
+description: 'The room is where it all begins, no chicken no egg. Sparkle and shine.'
+template:
+  repo: the-room-template
+  name: the-room
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
